@@ -414,6 +414,10 @@ a.fonts-nav-link.active:after {
   left: var(--left-js);
   width: var(--width-js);
 }
+[value=python]:checked ~ .screenshot-stage .screenshot-controls .controls.with-widths:after {
+  left: var(--left-python);
+  width: var(--width-python);
+}
 [value=charmap]:checked ~ .screenshot-stage .screenshot-controls .controls.with-widths:after {
   left: var(--left-charmap);
   width: var(--width-charmap);
@@ -496,6 +500,15 @@ a.fonts-nav-link.active:after {
   color: var(--inactive-text, white);
 }
 [value=js]:not(:checked) ~ .screenshot-stage .screenshot-wrapper [data-language=js] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+[value=python]:not(:checked) ~ .screenshot-stage .screenshot-controls [data-language=python] {
+  background-color: transparent;
+  color: var(--inactive-text, white);
+}
+[value=python]:not(:checked) ~ .screenshot-stage .screenshot-wrapper [data-language=python] {
   opacity: 0;
   pointer-events: none;
 }
